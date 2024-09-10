@@ -1,0 +1,19 @@
+*{
+    margin: 0;
+    padding: 0
+}
+.a{
+    background-color: aqua;
+}
+image{
+    width: 200px;
+    height: 200px;
+}
+.divblock{
+    /* background-color:burlywood; */
+    background-image: url(download.png);
+    width: 100%;
+    height: 2vh;
+    font-size: 3rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}

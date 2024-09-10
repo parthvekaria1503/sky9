@@ -1,0 +1,5 @@
+BrowserRouter (aliased as Router here) wraps your entire application. It enables the routing functionality.
+Routes is a container for all your Route elements.
+Route specifies a path and the component that should be rendered when the path matches.
+Link is used for navigation. It allows users to move between different routes without reloading the page.
+

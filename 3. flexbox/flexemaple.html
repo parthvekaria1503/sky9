@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .container{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            height: 15vh;
+            align-items: flex-start;
+            justify-content: flex-start;
+            align-content: flex-start;
+        }
+        .item{
+            width: 100px;
+            text-align: center;
+            height: 10vh;
+            background: lawngreen;
+            align-content: center;
+        }
+        .item1{
+            width: 100px;
+            height: 10vh;
+            background: lawngreen;
+        }
+        h1{
+            text-align: center;
+        }
+
+        .container1{
+            width: 100%;
+            margin: auto;
+            border: 1px solid lightblue;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        .items{
+            flex-basis: 25%;
+            margin: 10px 0px;
+            padding: 10px 0px;
+            box-shadow: 0px 0px 5px 3px lightgray;
+            text-align: center;
+        }
+        h3,p {
+            padding: 5px;
+        }
+        button{
+            color: aliceblue;
+            background-color: black;
+            border-radius: 20px;
+        }
+        @media only screen  and (min-width: 200px) and (max-width: 767px){
+                .container1{
+                    width: 100%;
+                    flex-direction: column;
+                }
+                .items{
+                    margin: 10px;
+                }
+            }
+    </style>
+</head>
+<body>
+     <section>
+        <div class="container">
+            <div class="item" style="flex-grow: 2;">
+                <img src="2. css/project/image/a.jpg" alt="">
+            </div>
+            <div class="item">
+                <p>About us</p>
+            </div>
+            <div class="item">
+                <p>Contact us</p>
+            </div>
+            <div class="item">
+                <p>FAQs</p>
+            </div>
+            <div class="item">
+                <p>Blogs</p>
+            </div>
+            <div class="item">
+                <p>Home</p>
+            </div>
+        </div>
+    </section> 
+
+    <section>
+        <h1>Tranning Section</h1>
+        <div class="container1">
+            <div class="items">
+                <img src="2. css/project/image/a.jpg" alt="">
+                <h3>Web development</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius veritatis voluptatibus odit voluptates laborum numquam architecto perferendis quam, consequuntur nostrum!</p>
+                <button>learn more</button>
+            </div>
+            <div class="items">
+                <img src="2. css/project/image/a.jpg" alt="">
+                <h3>Web development</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius veritatis voluptatibus odit voluptates laborum numquam architecto perferendis quam, consequuntur nostrum!</p>
+                <button>learn more</button>
+            </div>
+            <div class="items">
+                <img src="2. css/project/image/a.jpg" alt="">
+                <h3>Web development</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius veritatis voluptatibus odit voluptates laborum numquam architecto perferendis quam, consequuntur nostrum!</p>
+                <button>learn more</button>
+            </div>
+            <div class="items">
+                <img src="2. css/project/image/a.jpg" alt="">
+                <h3>Web development</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius veritatis voluptatibus odit voluptates laborum numquam architecto perferendis quam, consequuntur nostrum!</p>
+                <button>learn more</button>
+            </div>
+            <div class="items">
+                <img src="2. css/project/image/a.jpg" alt="">
+                <h3>Web development</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius veritatis voluptatibus odit voluptates laborum numquam architecto perferendis quam, consequuntur nostrum!</p>
+                <button>learn more</button>
+            </div>
+            <div class="items">
+                <img src="2. css/project/image/a.jpg" alt="">
+                <h3>Web development</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius veritatis voluptatibus odit voluptates laborum numquam architecto perferendis quam, consequuntur nostrum!</p>
+                <button>learn more</button>
+            </div>
+            <div class="items">
+                <img src="2. css/project/image/a.jpg" alt="">
+                <h3>Web development</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius veritatis voluptatibus odit voluptates laborum numquam architecto perferendis quam, consequuntur nostrum!</p>
+                <button>learn more</button>
+            </div>
+            <div class="items">
+                <img src="2. css/project/image/a.jpg" alt="">
+                <h3>Web development</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius veritatis voluptatibus odit voluptates laborum numquam architecto perferendis quam, consequuntur nostrum!</p>
+                <button>learn more</button>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

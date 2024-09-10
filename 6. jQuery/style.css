@@ -1,0 +1,34 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.div1{
+    width: 20vw;
+    height: 15vh;
+    margin-top: 2rem;
+    margin-left: auto;
+    margin-right: auto;
+    color: aliceblue;
+    text-align: center;
+    background-color: darkblue;
+}
+.div2{
+    margin-top: 2rem;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    color: aliceblue;
+    width: 20vw;
+    height: 15vh;
+    background-color: darkblue;
+}
+.div3{
+    margin-top: 2rem;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    color: aliceblue;
+    width: 20vw;
+    height: 15vh;
+    background-color: darkblue;
+}

@@ -1,0 +1,53 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+}
+.head{
+    width: 100%;
+    background-color: azure;
+}
+.headleft{
+    width: 30%;
+    float: left;
+    display: inline-block;
+}
+.logo{
+    width: 15vw;
+    height: 15vh;
+}
+.headright{
+    width: 70%;
+
+    display: inline-block;
+}
+.linkclass{
+    display: inline-block;
+    padding: 1.1em;
+    float: right;
+}
+table, th, td{
+    border: 1px solid black;
+    /* width: %; */
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    border-collapse: collapse
+}
+.ad{
+    width: 50%;
+    display: inline-block;
+    float: left;
+}
+.content{
+    width: 50%;
+    padding: 15px;
+    float: right;
+    display: inline-block;
+}
+input{
+    width: 100%;
+}

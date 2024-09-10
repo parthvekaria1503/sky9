@@ -1,0 +1,35 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.navbar{
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+.carousal{
+    height: 80vh;
+}
+.bg-info-subtle{
+    background-color: #f7f7f7!important;
+    opacity: 0.9;
+    color: darkslateblue;
+    border-radius: 1rem;
+}
+.articlecontent{
+    font-size: 2rem;
+}
+.president{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 30rem;
+}
+.carousel-inner{
+    height: 80vh;
+}
+.iconsimg{
+    display: block;
+    margin-top: auto;
+    margin-bottom: auto;
+}

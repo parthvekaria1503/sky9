@@ -1,0 +1,326 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+    
+}
+:root{
+    --BGCOLOR: rgb(154, 209, 152);
+    --FS: cla(1.75rem, 3vh, 2.25rem);
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    /* background-image: linear-gradient(steelblue, white); */
+}
+div{
+    background-color: var(--BGCOLOR );
+    width: 100%;
+    /* border: 1px solid red; */
+    outline: 5px solid palegoldenrod;
+    outline-offset: -20px;
+}
+.a{
+    font-style: italic;
+}
+#a{
+    text-align: center;
+    line-height: 1.5;
+    font-size: 16px;
+    padding: 2px;
+    margin: 5px;
+}
+.b{
+    background-color: rebeccapurple;
+    width: 100%;
+    height: 10px;
+    border: 2px solid red;
+    border-radius: 20px;
+}
+#b{
+    margin: 3rem auto;
+    text-indent: 2em;
+    letter-spacing: 0.1em;
+    word-spacing: 0.2em;
+    font-weight: lighter;
+    text-decoration: dotted;
+    cursor: pointer;
+    color: cadetblue;
+}
+c:hover{
+    color: blue;
+    opacity: 0.8;
+    list-style-type: circle;
+    list-style-position: inside;
+    padding-inline: 0.5rem;
+}
+
+.columns{
+    /* column-count: 4; */
+    /* column-width: 250px; */
+    columns: 4 250px;
+    column-rule: 3px solid #333;
+    column-gap: 3;
+    break-inside: avoid;
+    white-space: wrap;
+}
+
+.columns p{
+    margin-top: 5px;
+}
+.box{
+    min-width: 100px;
+    min-height: 100px;
+    background-color: black;
+    color: #fff;
+    font-size: 2rem;
+    padding: 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+h3{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: var(--FS);
+}
+.cont{
+    max-width: 800px;
+    min-height: 400px;
+    margin-inline: auto;
+    border: 1px solid rebeccapurple;
+    display: flex;
+    gap: 1;
+    justify-content: space-between;
+    align-items: center;
+    /* flex-direction: row; */
+    /* flex-wrap: wrap; */
+    flex-flow: row wrap;
+    align-content: center;
+}
+.grid{
+    display: grid;
+    grid-auto-flow: row;
+}
+a:active{
+    color: greenyellow;
+}
+a:focus{
+    color: aqua;
+}
+a:visited{
+    color: red
+}
+.g1{
+    background-color: brown;
+    color: #fff;
+    font-size: 2rem;
+}
+.col{
+    margin-top: 5rem;
+    column-count: 3;
+    column-width: 250px;
+    column-rule: 3px solid rebeccapurple;
+    column-gap: 3rem;
+    margin: 2rem;
+}
+.col h2{
+    break-inside: avoid;
+}
+.imgsec{
+    border: 2px solid khaki;
+    padding: 20px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 30px;
+    background-color: aquamarine;
+    background-image: url('bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    max-width: 100%;
+}
+.h1{
+    font-size: 5rem;
+    text-shadow: 2px 2px 5px #fff;
+    background-color: firebrick;
+    border-radius: 20px;
+    opacity: 0.8;
+}
+.nowrap{
+    white-space: nowrap;
+}
+.imgfig img{
+    display: block;
+    width: 100%;
+    height: auto;
+    min-width: 100px;
+    border: 5px solid salmon;
+    border-radius: 50%;
+}
+header nav main footer{
+    display: grid;
+    place-content: center;
+    grid-template-columns: 100%;
+    align-items: center;
+}
+header, footer{
+    position: sticky;
+    background-color: #333;
+    color: #fff;
+}
+header{
+    top: 0;
+}
+main{
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 1rem;
+    min-height: 50vh;
+}
+.card{
+    scroll-margin-top: 8rem;
+    width: min(100%, 350px);
+    background-color: lightcoral;
+    border: 2px solid gray;
+    border-radius: 15px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.card figure{
+    display: flex;
+    flex-flow: column nowrap;
+}
+.card img{
+    border: 5px solid lavender;
+    border-radius: 50px;
+}
+.card figcaption{
+    text-align: center;
+}
+
+footer{
+    bottom: 0;
+}
+nav{
+    background-color: wheat;
+    padding: 0.5rem;
+    display: flex;
+    justify-content: space-evenly;
+}
+img{
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+@media screen and (min-width: 576px){
+    main{
+        justify-content: center;
+        flex-flow: row wrap;
+        padding: 1rem;
+    }
+    .card{
+        width: min(100%, 400px);
+    }
+}
+@media screen and (min-width: 768px){
+    nav{
+        display: none;
+    }
+    .card{
+        width: min(100%, 325px);
+    }
+    .card figure{
+        flex-flow: column-reverse;
+    }
+}
+@media screen and (min-width: 992px){
+    .card{
+        width: min(100%, 325px);
+    }
+}
+@media screen and (min-width: 1200px){
+    body{
+        background-color: lemonchiffon;
+    }
+}
+@media screen and (max-height: 576px)and(min-aspect-ratio: 7/4){
+    body{
+        background-color: chocolate;
+    }
+    h1,h2{
+        font-size: 1.5rem;
+    }
+    nav{
+        display: none;
+    }
+    main{
+        flex-flow: row nowrap;
+        justify-content: space-evenly;
+        align-items: stretch;
+    }
+}
+.main{
+    display: flex;
+    flex-grow: 1;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+.square{
+    width: 200px;
+    height: 200px;
+    border: 1px solid rebeccapurple;
+    display: grid;
+    place-content: center;
+}
+.animate{
+    background-color: yellow;
+    transform: translateX(20%);
+    transform: rotateX(180deg);
+    transform: scaleX(120%);
+    transform: skewX(-10deg);
+}
+.animate1{
+    background-color: lightblue;
+    animation-name: slide;
+    animation-duration: 5s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 1s;
+    animation-iteration-count: 5;
+}
+@keyframes slide {
+    0%{
+        transform: translateX(0);
+    }
+    25%{
+        transform: translateX(600px) rotate(180deg);
+    }
+    50%{
+        transform: translateX(-600px) rotate(-180deg);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+.animate2{
+    background-color: darkcyan;
+    transition-duration: 3s;
+    transform: rotate(180deg);
+}
+.square:hover{
+    background-color: lightblue;
+    transition-property: background-color;
+    transition-duration: 2s;
+    transition-delay: 0.5s;
+    transition-timing-function: ease;
+}
