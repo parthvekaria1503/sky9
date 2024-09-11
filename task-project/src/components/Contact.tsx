@@ -43,13 +43,13 @@ function Contact() {
           <form>
             <fieldset className='fieldset'>
               <div className='inputstyle'>
-                <input className='inputtype' type="text" value={name} onChange={(e) => setName(e.target.value)} placeholder='Name' />
+                <input className='inputtype' required type="text" value={name} onChange={(e) => setName(e.target.value)} placeholder='Name' />
               </div>
               <div className='inputstyle'>
-                <input className='inputtype' type="email" value={email} placeholder='Email' onChange={(e) => setEmail(e.target.value)}/>
+                <input className='inputtype' required type="email" value={email} placeholder='Email' onChange={(e) => setEmail(e.target.value)}/>
               </div>
               <div className='inputstyle'>
-                <textarea className='inputtype' value={message} placeholder='Message' onChange={(e) => setMessage(e.target.value)}></textarea>
+                <textarea className='inputtype' required value={message} placeholder='Message' onChange={(e) => setMessage(e.target.value)}></textarea>
               </div>
               <button className="btn-send" type="button" onClick={handleSave}>Send</button>
             </fieldset>

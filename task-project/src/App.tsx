@@ -1,29 +1,61 @@
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import "./App.css";
+import Navbar from "./components/Navbar";
+import Items from "./components/Items";
+import Service from "./components/Service";
+import Products from "./components/Products";
+import ProductsItem from "./components/ProductsItem";
+import About from "./components/About";
+import Contact from "./components/Contact";
+import Footer from "./components/Footer";
+import Permanent from "./components/Permanent";
 
-import './App.css'
-import Permanent from './components/Permanent'
-import Items from './components/Items'
-import Service from './components/Service'
-import ProductsItem from './components/ProductsItem'
-import About from './components/About'
-import Contact from './components/Contact'
-import Footer from './components/Footer'
-
-function App() {
-  
-
+// Layout component for routes that need Navbar and Footer
+const MainLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   return (
     <>
-      <div>
-        <Permanent />
-        <Items />
-        <Service />
-        <ProductsItem />
-        <About />
-        <Contact />
-        <Footer />
+      <Navbar />
+      <Permanent />
+      <div className="main-content">
+        {children}
       </div>
+      <Footer />
     </>
-  )
-}
+  );
+};
 
-export default App
+// Main App component with routing
+const App: React.FC = () => {
+  return (
+    <Router>
+      <Routes>
+        {/* Route for Home with all components */}
+        <Route
+          path="/"
+          element={
+            <MainLayout>
+              <Items />
+              <Service />
+              <ProductsItem />
+              <About />
+              <Contact />
+            </MainLayout>
+          }
+        />
+        {/* Route for Products with only Navbar and Products */}
+        <Route
+          path="/products"
+          element={
+            <>
+              <Navbar />
+              <Products />
+            </>
+          }
+        />
+      </Routes>
+    </Router>
+  );
+};
+
+export default App;

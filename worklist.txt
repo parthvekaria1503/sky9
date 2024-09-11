@@ -1,8 +1,6 @@
 @Abhisheksir @Akash Devani
 
 
-Today's Work:(09/09/24)
+Today's Work:(11/09/24)
 	
-	1) Handle APIs in react redux toolkit
-
-	2) Final Task Started..
+	1) Final Task Processing...

@@ -1,10 +1,1 @@
-card fetch			
-	how to fetch data from api into website in reactjs
-	https://fakestoreapi.com/products
-
-animation product card
-product fetch
-redirect component
-product page
-
-
+redirect...
