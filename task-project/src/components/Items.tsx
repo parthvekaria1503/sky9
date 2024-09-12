@@ -14,7 +14,6 @@ const Items: React.FC = () => {
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
 
-  // Pagination state
   const [currentPage, setCurrentPage] = useState<number>(1);
   const itemsPerPage = 3;
 
@@ -62,7 +61,7 @@ const Items: React.FC = () => {
   };
 
   return (
-    <div className="main-item">
+    <div className="main-item" id="home">
       <div className="header">
         <div className="min-card">
           {currentItems.map((user) => (

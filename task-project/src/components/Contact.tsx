@@ -1,9 +1,11 @@
-import {useRef, useState, useEffect } from 'react';
+import {useState } from 'react';
 import img4 from '../assets/forth-image.jpg'
 import '../App.css'
+import useScrollToSection from './useScrollToSection';
 
 
 function Contact() {
+  useScrollToSection();
 
   const [name, setName] = useState<string>('');
   const [email, setEmail] = useState<string>('');
@@ -15,27 +17,24 @@ function Contact() {
     localStorage.setItem('user', JSON.stringify(user));
     alert('User data saved!');
 
-    // Clear the input fields
     setName('');
     setEmail('');
     setMessage('');
   };
 
-  // Load saved data from localStorage when the component mounts
-  useEffect(() => {
-    const userString = localStorage.getItem('user');
-    if (userString) {
-      const user = JSON.parse(userString);
-      setName(user.name || '');
-      setEmail(user.email || '');
-      setMessage(user.message || '');
-    }
-  }, []);
 
-  const contactRef = useRef(null);
+  // useEffect(() => {
+  //   const userString = localStorage.getItem('user');
+  //   if (userString) {
+  //     const user = JSON.parse(userString);
+  //     setName(user.name || '');
+  //     setEmail(user.email || '');
+  //     setMessage(user.message || '');
+  //   }
+  // }, []);
 
   return (
-    <div className="about-item" ref={contactRef}>
+    <div className="about-item" id='contact'>
       <div className="about-section1">
         <p className="item-text1">Contact Us</p>
         <p className="service-text2">Pellentesque nec dui pellentesque, fermentum turpis eu, facilisis libero. Vestibulum fringilla nulla augue, at consequat metus facilisis condimentum.</p>

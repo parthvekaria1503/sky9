@@ -1,11 +1,10 @@
-import React,{ useRef} from 'react'
 import img2 from '../assets/secound-image.jpg'
 import '../App.css'
 
 function Service() {
-  const servicesRef = useRef(null);
+  
   return (
-    <div className="main-item" ref={servicesRef}>
+    <div className="main-item" id='service'>
       <div className="service-section1">
         <p className="item-text1">Our Services</p>
         <p className="service-text2">Credit goes to Pexels website for background images and Unsplash website for gallery images used in this Vertex HTML template. Vestibulum quis ultrices ipsum, tempor cursus odio. Donec et nisl sit amet mauris consequat sodales.</p>

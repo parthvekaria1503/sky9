@@ -1,11 +1,9 @@
-import {useRef} from "react";
 import img3 from '../assets/third-image.jpg'
 import '../App.css'
 
 function About() {
-  const aboutRef = useRef(null);
   return (
-    <div className="about-item" ref={aboutRef}>
+    <div className="about-item" id="about">
       <div className="about-section1">
         <p className="about-text1">About Us</p><br/>
         <p className="service-text2">Nunc dictum rhoncus nunc et vehicula. Sed velit arcu, aliquet id rhoncus eu, pretium ac ante. Nulla ut urna a augue semper pellentesque. Nulla ullamcorper vel.</p>

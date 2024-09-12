@@ -11,7 +11,6 @@ import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import Permanent from "./components/Permanent";
 
-// Layout component for routes that need Navbar and Footer
 const MainLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   return (
     <>
@@ -25,12 +24,10 @@ const MainLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   );
 };
 
-// Main App component with routing
 const App: React.FC = () => {
   return (
     <Router>
       <Routes>
-        {/* Route for Home with all components */}
         <Route
           path="/"
           element={
@@ -43,7 +40,6 @@ const App: React.FC = () => {
             </MainLayout>
           }
         />
-        {/* Route for Products with only Navbar and Products */}
         <Route
           path="/products"
           element={

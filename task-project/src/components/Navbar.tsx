@@ -1,15 +1,8 @@
-import React, { useRef } from "react";
-import { Link } from "react-router-dom";
+import React from "react";
+// import { Link } from "react-router-dom";
+import { HashLink as Link } from 'react-router-hash-link';
 
 const Navbar: React.FC = () => {
-  const homeRef = useRef<HTMLDivElement>(null);
-  const servicesRef = useRef<HTMLDivElement>(null);
-  const aboutRef = useRef<HTMLDivElement>(null);
-  const contactRef = useRef<HTMLDivElement>(null);
-
-  const scrollToSection = (ref: React.RefObject<HTMLDivElement>) => {
-    ref.current?.scrollIntoView({ behavior: "smooth" });
-  };
 
   return (
     <div className="stickey">
@@ -19,19 +12,17 @@ const Navbar: React.FC = () => {
             <Link
               to="/"
               className="main-logo"
-              onClick={() => scrollToSection(homeRef)}
             >
               Introduction
             </Link>
           </li>
           <li>
-            <Link
+            <a
               className="link-decoration"
-              to="/"
-              onClick={() => scrollToSection(servicesRef)}
+              href="#service"
             >
               Services
-            </Link>
+            </a>
           </li>
           <li>
             <Link className="link-decoration" to="/products">
@@ -39,22 +30,15 @@ const Navbar: React.FC = () => {
             </Link>
           </li>
           <li>
-            <Link
+            <a
               className="link-decoration"
-              to="/"
-              onClick={() => scrollToSection(aboutRef)}
+              href="#about"
             >
               About
-            </Link>
+            </a>
           </li>
           <li>
-            <Link
-              className="link-decoration"
-              to="/"
-              onClick={() => scrollToSection(contactRef)}
-            >
-              Contact
-            </Link>
+            <Link className="link-decoration" to="#contact">Contact</Link>
           </li>
         </ul>
       </nav>
