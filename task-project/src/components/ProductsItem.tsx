@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import "../App.css";
 
 interface User {
@@ -8,12 +8,11 @@ interface User {
   description: string;
 }
 
-const Productsitem: React.FC = () => {
+const Productsitem = () => {
   const [users, setUsers] = useState<User[] | null>(null);
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
 
-  // Pagination state
   const [currentPage, setCurrentPage] = useState<number>(1);
   const itemsPerPage = 5;
 
@@ -61,12 +60,12 @@ const Productsitem: React.FC = () => {
       <p className='product-head-text'>Our Products</p>
       
         <div className="main-product">
-        {currentItems.map(user => (
+        {currentItems.map((user, item) => (
             <div className="cardeffect" key={user.id}>
               <div className="cardeffect-image">
                 <img src={user.image} alt="Cardeffect Image" className="img-product" />
                 <div className="textonimage">
-                  <p>Title</p>
+                  <p>Number {item +1}</p>
                 </div>
               </div>
               <div className="cardeffect-content">
@@ -81,10 +80,7 @@ const Productsitem: React.FC = () => {
             <button 
               key={number} 
               className={`page-button ${currentPage === number ? 'active' : ''}`} 
-              onClick={() => handlePageChange(number)}
-            >
-              {number}
-            </button>
+              onClick={() => handlePageChange(number)}>{number}</button>
           ))}
         </div>
       </div>

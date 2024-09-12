@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import "../App.css";
 
 interface User {
@@ -8,17 +8,17 @@ interface User {
   description: string;
 }
 
-const Products: React.FC = () => {
+const Products = () => {
   const [users, setUsers] = useState<User[] | null>(null);
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
-    const fetchUsers = async () => {
+    const fetchproduct = async () => {
       try {
         const response = await fetch('https://fakestoreapi.com/products');
         if (!response.ok) {
-          throw new Error('Network response was not ok');
+          throw new Error('network not ok');
         }
         const data: User[] = await response.json();
         setUsers(data);
@@ -26,13 +26,13 @@ const Products: React.FC = () => {
         if (err instanceof Error) {
           setError(err.message);
         } else {
-          setError('An unknown error occurred');
+          setError('error');
         }
       } finally {
         setLoading(false);
       }
     };
-    fetchUsers();
+    fetchproduct();
   }, []);
 
   if (loading) return <div>Loading...</div>;
@@ -43,19 +43,19 @@ const Products: React.FC = () => {
     <div className="product-heading">
       <p className='product-head-text'>Our Products</p>
       <div className="product-page-main">
-        {users.map(user => (
-          <div className="cardeffect" key={user.id}>
-          <div className="cardeffect-image">
-            <img src={user.image} alt="Cardeffect Image" className="img-product" />
-            <div className="textonimage">
-              <p>Title</p>
+        {users.map((product, index) => (
+          <div className="cardeffect" key={product.id}>
+            <div className="cardeffect-image">
+              <img src={product.image} alt="Cardeffect Image" className="img-product" />
+              <div className="textonimage">
+                <p>Number {index + 1}</p>
+              </div>
+            </div>
+            <div className="cardeffect-content">
+              <h3>{product.title}</h3>
+              <p>{product.description}</p> 
             </div>
           </div>
-          <div className="cardeffect-content">
-            <h3>{user.title}</h3>
-            <p></p>
-          </div>
-        </div>
         ))}
       </div>
     </div>

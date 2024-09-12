@@ -44,6 +44,7 @@ a{
 }
 .main-logo{
   color: #93CB99;
+  /* font-size: 25px; */
 }
 .link-decoration:hover{
   color: #93CB99;
@@ -197,7 +198,6 @@ li{
 }
 .fixed-box{
   position: absolute;
-  
 }
 .box-style{
   position: fixed;
@@ -417,40 +417,12 @@ color: #93CB99;}
   background-color: #e2e6ea;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .main-product{
   width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  /* padding: 2rem; */
 }
 
 .cardeffect {
@@ -515,10 +487,398 @@ color: #93CB99;}
 }
 
 .cardeffect:hover .cardeffect-image {
-  transform: translateY(-50%); /* Move the image upwards by half of the cardeffect's height */
+  transform: translateY(-50%);
 }
 
 .cardeffect:hover .cardeffect-content {
-  transform: translateY(0); /* Move the content into view */
-  opacity: 1; /* Show the content */
+  transform: translateY(0);
+  opacity: 1; 
+}
+
+
+/* Loader.css */
+.loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #333333;
+  z-index: 9999;
+  font-size: 1.5em;
+}
+.spinner-6 {
+  width: 50px;
+  aspect-ratio: 1;
+  display: grid;
+  border: 4px solid #0000;
+  border-radius: 50%;
+  border-color: #ccc #0000;
+  animation: s6 1s infinite linear;
+}
+.spinner-6::before,
+.spinner-6::after {    
+  content: "";
+  grid-area: 1/1;
+  margin: 2px;
+  border: inherit;
+  border-radius: 50%;
+}
+.spinner-6::before {
+  border-color: #f03355 #0000;
+  animation: inherit; 
+  animation-duration: .5s;
+  animation-direction: reverse;
+}
+.spinner-6::after {
+  margin: 8px;
+}
+
+@keyframes s6 { 
+  100%{transform: rotate(1turn)}
+}
+
+/* for responisive */
+
+
+@media only screen and (max-width: 600px) {
+  .box-style{
+    position: fixed;
+    width: 160px;
+    height: 20vh;
+    top: 65vh;
+    left: 52vw;
+    z-index: 999;
+    background-color: #333333;
+  }
+  .stickey{
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+  }
+  .box-text{
+    font-size: 2rem;
+    text-align: center;
+    color: #999999;
+  }
+  .flexible{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    min-height: 10vh;
+    background-color: #444444;
+  }
+  .main-logo{
+    /* width: 20%; */
+    color: #93CB99;
+  }
+  .header{
+    width: 100%;
+  }
+  .item-section2{
+    width: 100%;
+  }
+  .footer-item{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+  }
+  .footer-img{
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    padding-bottom: 2rem;
+  }
+  .btnstyle{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+  .btn-pre1{
+    background-color: transparent;
+    display: inline-block;
+    border-bottom-color: rgb(102, 102, 102);
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    cursor: pointer; 
+    font-size: 1.2rem;
+    color: #848484;
+    text-decoration: none;
+    width: 40%;
+    height: 5vh;
+    margin: 1rem;
+  }
+  .btn-next1{
+    background-color: transparent;
+    border-bottom-color: rgb(102, 102, 102);
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    cursor: pointer; 
+    font-size: 1.2rem;
+    color: #848484;
+    text-decoration: none;
+    width: 40%;
+    height: 5vh;
+    margin: 1rem;
+  }
+  .service-section1{
+    width: 100%;
+    padding: 3rem;
+    text-align: center;
+  }
+  .img1-style-service{
+    display: none;
+  }
+  .btn-next{
+    background-color: transparent;
+    border-bottom-color: rgb(102, 102, 102);
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    cursor: pointer; 
+    font-size: 1.2rem;
+    color: #848484;
+    text-decoration: none;
+    width: 50%;
+    height: 5vh;
+  }
+  .main-product{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .product-head-text{
+    text-align: center;
+    color: #93CB99;
+    font-size: 1.5rem;
+    font-weight: bolder;
+  }
+  .about-item{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  .about-section1{
+    width: 100%;
+    text-align: center;
+    padding: 5rem;
+    line-height: 2rem;
+  }
+  .about-section2{
+    width: 90%;
+    padding: 1rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .btn-send{
+    background-color: transparent;
+    border-bottom-color: rgb(102, 102, 102);
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    cursor: pointer; 
+    font-size: 1.2rem;
+    color: #848484;
+    text-decoration: none;
+    width: 50%;
+    height: 5vh;
+  }
+  .responsive-map-container {
+    position: absolute;
+    top: 50vh;
+    left: 25vw;
+  }
+  .iframe{
+    width: 50%;
+    height: 25vh;
+    border: none;
+  }
+  .link-decoration{
+    color: #93CB99;
+    font-size: 5px;
+  }
+}
+
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+  .box-style{
+    position: fixed;
+    width: 300px;
+    height: 20vh;
+    top: 60vh;
+    left: 62vw;
+    z-index: 999;
+    background-color: #333333;
+  }
+
+  .stickey{
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+  }
+  
+  .flexible{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    min-height: 10vh;
+    gap: 2rem;
+    background-color: #444444;
+  }
+  .link-decoration{
+    color: #93CB99;
+    font-size: 2rem;
+  }
+  .main-logo{
+    /* width: 20%; */
+    font-size: 2.5rem;
+    color: #93CB99;
+  }
+  .header{
+    width: 100%;
+  }
+  .item-section2{
+    width: 100%;
+  }
+  .footer-item{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+  }
+  .footer-img{
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    padding-bottom: 2rem;
+  }
+  .btnstyle{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+  .btn-pre1{
+    background-color: transparent;
+    display: inline-block;
+    border-bottom-color: rgb(102, 102, 102);
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    cursor: pointer; 
+    font-size: 1.2rem;
+    color: #848484;
+    text-decoration: none;
+    width: 40%;
+    height: 5vh;
+    margin: 1rem;
+  }
+  .btn-next1{
+    background-color: transparent;
+    border-bottom-color: rgb(102, 102, 102);
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    cursor: pointer; 
+    font-size: 1.2rem;
+    color: #848484;
+    text-decoration: none;
+    width: 40%;
+    height: 5vh;
+    margin: 1rem;
+  }
+  .service-section1{
+    width: 100%;
+    padding: 3rem;
+    text-align: center;
+  }
+  .btn-next{
+    background-color: transparent;
+    border-bottom-color: rgb(102, 102, 102);
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    cursor: pointer; 
+    font-size: 1.2rem;
+    color: #848484;
+    text-decoration: none;
+    width: 50%;
+    height: 5vh;
+  }
+  .main-product{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  .product-head-text{
+    text-align: center;
+    color: #93CB99;
+    font-size: 1.5rem;
+    font-weight: bolder;
+  }
+  .about-item{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  .about-section1{
+    width: 100%;
+    text-align: center;
+    padding: 5rem;
+    line-height: 2rem;
+  }
+  .about-section2{
+    width: 90%;
+    padding: 1rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .btn-send{
+    background-color: transparent;
+    border-bottom-color: rgb(102, 102, 102);
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    cursor: pointer; 
+    font-size: 1.2rem;
+    color: #848484;
+    text-decoration: none;
+    width: 50%;
+    height: 5vh;
+  }
+  .responsive-map-container {
+    position: absolute;
+    top: 30%;
+    left: 20%;
+  }
+  .iframe{
+    width: 50vw;
+    height: 50vh;
+    border: none;
+  }
+  .main-item{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+  }
+  .service-feature-main{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    margin-top: 19vh;
+  }
+}
+
+@media only screen and (min-width: 1025px) {
+
 }

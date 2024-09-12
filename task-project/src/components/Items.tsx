@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import img1 from "../assets/first-image.jpg";
 import "../App.css";
 
@@ -9,7 +9,7 @@ interface User {
   description: string;
 }
 
-const Items: React.FC = () => {
+const Items = () => {
   const [users, setUsers] = useState<User[] | null>(null);
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
@@ -18,11 +18,11 @@ const Items: React.FC = () => {
   const itemsPerPage = 3;
 
   useEffect(() => {
-    const fetchUsers = async () => {
+    const fetchdata = async () => {
       try {
         const response = await fetch("https://fakestoreapi.com/products");
         if (!response.ok) {
-          throw new Error("Network response was not ok");
+          throw new Error("network response not ok");
         }
         const data: User[] = await response.json();
         setUsers(data);
@@ -30,20 +30,19 @@ const Items: React.FC = () => {
         if (err instanceof Error) {
           setError(err.message);
         } else {
-          setError("An unknown error occurred");
+          setError("error ");
         }
       } finally {
         setLoading(false);
       }
     };
-    fetchUsers();
+    fetchdata();
   }, []);
 
-  if (loading) return <div>Loading...</div>;
-  if (error) return <div>Error: {error}</div>;
-  if (!users) return <div>No users found</div>;
+  if (loading) return <div>loading..</div>;
+  if (error) return <div>error: {error}</div>;
+  if (!users) return <div>no data found</div>;
 
-  // Pagination logic
   const indexOfLastItem = currentPage * itemsPerPage;
   const indexOfFirstItem = indexOfLastItem - itemsPerPage;
   const currentItems = users.slice(indexOfFirstItem, indexOfLastItem);

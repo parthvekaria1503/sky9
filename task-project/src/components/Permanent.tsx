@@ -1,4 +1,3 @@
-
 function permanent() {
   return (
     <div className='fixed-box'>

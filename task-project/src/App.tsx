@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./App.css";
 import Navbar from "./components/Navbar";
@@ -10,27 +10,37 @@ import About from "./components/About";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import Permanent from "./components/Permanent";
+import Loader from "./components/Loader";
 
-const MainLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+const MainLayout = ({ children }: { children: React.ReactNode }) => {
   return (
     <>
       <Navbar />
       <Permanent />
-      <div className="main-content">
-        {children}
-      </div>
+      <div className="main-content">{children}</div>
       <Footer />
     </>
   );
 };
 
-const App: React.FC = () => {
+const App = () => {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    // Simulate a network request or any loading process
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 2000); // Adjust the time to your needs
+
+    return () => clearTimeout(timer); // Cleanup if needed
+  }, []);
   return (
+    <>
+    {loading && <Loader />}
+    {!loading && (
     <Router>
       <Routes>
-        <Route
-          path="/"
-          element={
+        <Route path="/" element={
             <MainLayout>
               <Items />
               <Service />
@@ -40,17 +50,18 @@ const App: React.FC = () => {
             </MainLayout>
           }
         />
-        <Route
-          path="/products"
-          element={
+        <Route path="/products" element={
             <>
               <Navbar />
               <Products />
+              <Permanent />
             </>
           }
         />
       </Routes>
     </Router>
+    )}
+    </>
   );
 };
 
