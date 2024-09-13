@@ -1,6 +1,17 @@
 @Abhisheksir @Akash Devani
 
 
-Today's Work:(11/09/24)
+Today's Work:(13/09/24)
 	
-	1) Final Task Processing...
+	1) Next JS:
+
+		Introduction to Next.js
+		File Based Routing
+		Head, Script, Image, Link, Navbar Component
+		Creating Multiple Pages
+		Component Level CSS
+		Adding Global Styles
+		Styled jsx
+
+	with practise:
+		blog web		

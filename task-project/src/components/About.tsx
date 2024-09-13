@@ -1,4 +1,5 @@
 import img3 from '../assets/third-image.jpg'
+import { Link } from "react-router-dom";
 import '../App.css'
 
 function About() {
@@ -10,7 +11,7 @@ function About() {
         <p className="service-text2">Euismod eget, sollicitudin nec libero. Nulla euismod turpis a lacinia sagittis. Maecenas velit diam, vehicula vel tortor id, tristique euismod tortor. Cras ac.</p>
         <hr className='service-hr'/>
         <p className="service-text2">Quisque luctus feugiat dui eget malesuada. Donec rutrum, nibh vel lobortis placerat, leo enim feugiat arcu, ornare imperdiet urna sem vitae tellus.</p>
-        <button className="btn-next">Contact Us</button>
+        <button className="btn-next"><Link className="link-decoration" to="#contact">Contact</Link></button>
       </div>
 
       <div className="about-section2">

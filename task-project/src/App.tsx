@@ -1,8 +1,9 @@
-import React, {useState, useEffect} from "react";
+import React, {useState, useEffect, Suspense} from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./App.css";
 import Navbar from "./components/Navbar";
-import Items from "./components/Items";
+const LazyItem = React.lazy(()=>import('./components/Items'))
+// import Items from "./components/Items";
 import Service from "./components/Service";
 import Products from "./components/Products";
 import ProductsItem from "./components/ProductsItem";
@@ -27,12 +28,10 @@ const App = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    // Simulate a network request or any loading process
     const timer = setTimeout(() => {
       setLoading(false);
-    }, 2000); // Adjust the time to your needs
-
-    return () => clearTimeout(timer); // Cleanup if needed
+    }, 2000);
+    return () => clearTimeout(timer);
   }, []);
   return (
     <>
@@ -42,7 +41,10 @@ const App = () => {
       <Routes>
         <Route path="/" element={
             <MainLayout>
-              <Items />
+              <Suspense fallback={<div>loading</div>}>
+              <LazyItem/>
+              </Suspense>
+              {/* <Items /> */}
               <Service />
               <ProductsItem />
               <About />
