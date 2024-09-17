@@ -1,0 +1,13 @@
+javascript basics:
+
+	Question:
+	
+		1) staff list
+		2) data finder
+
+Basic React js:
+
+	Question:
+	
+		1) Slideshow
+		2) Sorting Article

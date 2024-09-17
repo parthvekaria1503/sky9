@@ -16,7 +16,7 @@ function Contact() {
   const handleSave = () => {
     const contactdetails = { name, email, message };
     localStorage.setItem('contactdetails', JSON.stringify(contactdetails));
-    alert('thankyou');
+    // alert('thankyou');
 
     setName('');
     setEmail('');
@@ -40,7 +40,7 @@ function Contact() {
               <div className='inputstyle'>
                 <textarea className='inputtype' required value={message} placeholder='Message' onChange={(e) => setMessage(e.target.value)}></textarea>
               </div>
-              <button className="btn-send" type="button" onClick={handleSave}>Send</button>
+              <button className="btn-send" type="submit" onClick={handleSave}>Send</button>
             </fieldset>
             </form>
         </div>

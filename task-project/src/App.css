@@ -420,6 +420,7 @@ color: #93CB99;}
 .main-product{
   width: 100%;
   display: flex;
+  flex-wrap: wrap;
   flex-direction: row;
   justify-content: center;
   align-items: center;

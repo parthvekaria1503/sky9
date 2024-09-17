@@ -1,17 +1,30 @@
 @Abhisheksir @Akash Devani
 
 
-Today's Work:(13/09/24)
+Today's Work:(17/09/24)
 	
-	1) Next JS:
+	javascript Intermediate:
 
-		Introduction to Next.js
-		File Based Routing
-		Head, Script, Image, Link, Navbar Component
-		Creating Multiple Pages
-		Component Level CSS
-		Adding Global Styles
-		Styled jsx
+		Question:
+	
+			1) User Transcation
+			2) Activity List
 
-	with practise:
-		blog web		
+	FrontEnd React:
+
+		Question:
+	
+			1) Product Validation
+			2) JS: data finder
+			3) React and Css Mcq quiz
+	
+	CSS: 
+		Questions and Answers(QUIZ)
+
+	
+	Node Js:
+		
+		Ouestion:
+			1) Recipe Filter
+			2) Order Processing
+
