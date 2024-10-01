@@ -1,30 +1,7 @@
 @Abhisheksir @Akash Devani
 
-
-Today's Work:(17/09/24)
+Today's Work: (01/10/24)
 	
-	javascript Intermediate:
-
-		Question:
-	
-			1) User Transcation
-			2) Activity List
-
-	FrontEnd React:
-
-		Question:
-	
-			1) Product Validation
-			2) JS: data finder
-			3) React and Css Mcq quiz
-	
-	CSS: 
-		Questions and Answers(QUIZ)
-
-	
-	Node Js:
+	 
 		
-		Ouestion:
-			1) Recipe Filter
-			2) Order Processing
-
+		
