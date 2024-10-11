@@ -1,7 +1,15 @@
 @Abhisheksir @Akash Devani
 
-Today's Work: (01/10/24)
-	
-	 
+Today's Work: (11/10/24)
+
+	Next JS:
+		Topics:
+			CRUD tasks in nextjs
+			useOptimistic Hook
+			Cache data
+			.env file.
+			Deployment Strategies
+
 		
-		
+		Revised Topics of Nextjs...
+				
