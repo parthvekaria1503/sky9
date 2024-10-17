@@ -1,15 +1,14 @@
-@Abhisheksir @Akash Devani
+.Here I'm notifying with an update on my current task.
 
-Today's Work: (11/10/24)
+.By October 17th, i will likely have accomplished our objectives.
 
-	Next JS:
-		Topics:
-			CRUD tasks in nextjs
-			useOptimistic Hook
-			Cache data
-			.env file.
-			Deployment Strategies
+.I've accomplished the following goals:
+	
+	.Make a form using React-Hook-Form for performing operations and checked for its optimization such like: usedefalutvalue, react.memo, usecallback, shouldunregister
+	
+	.Created mock server which manages the data for data operation and it works on JSON schema.
 
-		
-		Revised Topics of Nextjs...
-				
+.what i am currently working on this project phase is listed below:
+	. Going for tansack react query to implement in given above task. By which it helps to easy to fetch data.
+
+.This task is on schedule, and I think i am making the required progress towards our objectives.
