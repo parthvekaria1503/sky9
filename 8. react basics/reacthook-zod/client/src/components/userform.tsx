@@ -3,17 +3,15 @@ import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useCallback, useEffect, useState } from "react";
 
-
-// Define the type for your form data
 interface FormData {
   name: string;
   surname: string;
   email: string;
   password: string;
   city?: string;
+  state?: string;
   type: string;
   subType?: string;
-  additionalField?: string;
 }
 
 const schema = z.object({
@@ -22,9 +20,33 @@ const schema = z.object({
   email: z.string().email("Invalid email address"),
   password: z.string().min(6, "Password must be at least 6 characters long"),
   city: z.string().optional(),
+  state: z.string().optional(),
   type: z.string().min(1, "Type is required"),
   subType: z.string().optional(),
-  additionalField: z.string().optional(),
+}).refine((data) => {
+  if (data.type === "type2" || data.type === "type3" || data.type === "type4") {
+    return data.city !== undefined && data.city.trim() !== "";
+  }
+  return true;
+}, {
+  message: "City is required for the selected type",
+  path: ["city"],
+}).refine((data) => {
+  if (data.type === "type3") {
+    return data.subType !== undefined && data.subType.trim() !== "";
+  }
+  return true;
+}, {
+  message: "Subtype is required",
+  path: ["subType"],
+}).refine((data) => {
+  if (data.subType === "subtype1") {
+    return data.state !== undefined && data.state.trim() !== "";
+  }
+  return true;
+}, {
+  message: "State is required",
+  path: ["state"],
 });
 
 const UserForm = () => {
@@ -42,8 +64,11 @@ const UserForm = () => {
       email: "",
       password: "",
       type: "",
+      subType: "",
+      city: "",
+      state: "",
     },
-    shouldUnregister: false, // Keeps unmounted field values
+    shouldUnregister: false,
   });
 
   const selectedType = watch("type");
@@ -66,7 +91,7 @@ const UserForm = () => {
 
         const result = await response.json();
         console.log(result);
-        reset(); // Clear the form after submission
+        reset();
       } catch (error) {
         console.error(error);
       }
@@ -87,20 +112,17 @@ const UserForm = () => {
         throw new Error("Network response was not ok");
       }
       const data = await response.json();
-      console.log("Fetched Users:", data); // Log the fetched data
-      setUsers(data); // Store fetched users in state
+      console.log("Fetched Users:", data);
+      setUsers(data);
     } catch (error) {
       console.error("Failed to fetch users:", error);
     }
   };
-  
 
   return (
     <>
       <form onSubmit={handleSubmit(onSubmit)}>
-        <h1 className="w-full bg-slate-700 text-white text-center text-5xl">
-          User Form
-        </h1>
+        <h1 className="w-full bg-slate-700 text-white text-center text-5xl">User Form</h1>
 
         <div className="flex flex-row w-full justify-center">
           <div className="m-3 p-3 w-1/3">
@@ -108,32 +130,20 @@ const UserForm = () => {
               name="name"
               control={control}
               render={({ field }) => (
-                <input
-                  {...field}
-                  className="border w-full p-2"
-                  placeholder="Enter Name"
-                />
+                <input {...field} className="border w-full p-2" placeholder="Enter Name" />
               )}
             />
-            {errors.name && (
-              <span className="text-red-500">{errors.name.message}</span>
-            )}
+            {errors.name && <span className="text-red-500">{errors.name.message}</span>}
           </div>
           <div className="m-3 p-3 w-1/3">
             <Controller
               name="surname"
               control={control}
               render={({ field }) => (
-                <input
-                  {...field}
-                  className="border w-full p-2"
-                  placeholder="Enter Surname"
-                />
+                <input {...field} className="border w-full p-2" placeholder="Enter Surname" />
               )}
             />
-            {errors.surname && (
-              <span className="text-red-500">{errors.surname.message}</span>
-            )}
+            {errors.surname && <span className="text-red-500">{errors.surname.message}</span>}
           </div>
         </div>
 
@@ -143,33 +153,20 @@ const UserForm = () => {
               name="email"
               control={control}
               render={({ field }) => (
-                <input
-                  {...field}
-                  className="border w-full p-2"
-                  placeholder="Enter E-Mail"
-                />
+                <input {...field} className="border w-full p-2" placeholder="Enter E-Mail" />
               )}
             />
-            {errors.email && (
-              <span className="text-red-500">{errors.email.message}</span>
-            )}
+            {errors.email && <span className="text-red-500">{errors.email.message}</span>}
           </div>
           <div className="m-3 p-3 w-1/3">
             <Controller
               name="password"
               control={control}
               render={({ field }) => (
-                <input
-                  {...field}
-                  type="password"
-                  className="border w-full p-2"
-                  placeholder="Enter Password"
-                />
+                <input {...field} type="password" className="border w-full p-2" placeholder="Enter Password" />
               )}
             />
-            {errors.password && (
-              <span className="text-red-500">{errors.password.message}</span>
-            )}
+            {errors.password && <span className="text-red-500">{errors.password.message}</span>}
           </div>
         </div>
 
@@ -190,29 +187,22 @@ const UserForm = () => {
                 </select>
               )}
             />
-            {errors.type && (
-              <span className="text-red-500">{errors.type.message}</span>
-            )}
+            {errors.type && <span className="text-red-500">{errors.type.message}</span>}
           </div>
         </div>
 
         {/* Conditional Fields */}
-        {(selectedType === "type2" ||
-          selectedType === "type3" ||
-          selectedType === "type4") && (
+        {(selectedType === "type2" || selectedType === "type3" || selectedType === "type4") && (
           <div className="flex flex-row w-full justify-center">
             <div className="m-3 p-3 w-1/3">
               <Controller
                 name="city"
                 control={control}
                 render={({ field }) => (
-                  <input
-                    {...field}
-                    className="border w-full p-2"
-                    placeholder="Enter City"
-                  />
+                  <input {...field} className="border w-full p-2" placeholder="Enter City" />
                 )}
               />
+              {errors.city && <span className="text-red-500">{errors.city.message}</span>}
             </div>
           </div>
         )}
@@ -235,78 +225,69 @@ const UserForm = () => {
                   </select>
                 )}
               />
+              {errors.subType && <span className="text-red-500">{errors.subType.message}</span>}
             </div>
           </div>
         )}
 
-        {subType === "subtype1" && (
+        {selectedType === "type3" && subType === "subtype1" && (
           <div className="flex flex-row w-full justify-center">
             <div className="m-3 p-3 w-1/3">
               <Controller
-                name="additionalField"
+                name="state"
                 control={control}
                 render={({ field }) => (
-                  <input
-                    {...field}
-                    className="border w-full p-2"
-                    placeholder="State"
-                  />
+                  <input {...field} className="border w-full p-2" placeholder="Enter State" />
                 )}
               />
+              {errors.state && <span className="text-red-500">{errors.state.message}</span>}
             </div>
           </div>
         )}
 
         <div className="flex flex-row justify-center">
-          <button
-            type="submit"
-            className="mt-4 bg-blue-500 text-white p-3 rounded hover:bg-slate-950"
-          >
+          <button type="submit" className="mt-4 bg-blue-500 text-white p-3 rounded hover:bg-slate-950">
             Submit
           </button>
         </div>
       </form>
 
       <div className="relative overflow-x-auto shadow-md sm:rounded-lg">
-  <h1 className="text-center bg-slate-600 text-cyan-200 w-full mt-10 text-4xl">User Data Displayed</h1>
-  <table className="w-full text-sm overflow-scroll text-left rtl:text-right text-gray-500 dark:text-gray-400">
-    <thead className="text-xs text-gray-700 uppercase bg-gray-50 pt-2 dark:bg-gray-700 dark:text-gray-400">
-      <tr>
-        <td scope="col" className="px-6 py-3">Name</td>
-        <td scope="col" className="px-6 py-3">Surname</td>
-        <td scope="col" className="px-6 py-3">E-Mail</td>
-        <td scope="col" className="px-6 py-3">Password</td>
-        <td scope="col" className="px-6 py-3">Type</td>
-        <td scope="col" className="px-6 py-3">City</td>
-        <td scope="col" className="px-6 py-3">Sub-Type</td>
-        <td scope="col" className="px-6 py-3">State</td>
-        <td scope="col" className="px-6 py-3">Action</td>
-      </tr>
-    </thead>
-    <tbody className="w-full">
-    {users.map((user) => {
-  console.log("Rendering User:", user); // Log each user being rendered
-  return (
-    <tr key={user.email} className="border w-full">
-      <td className="text-slate-950 text-base  p-3">{user.name}</td>
-      <td className="text-slate-950 text-base p-3">{user.surname}</td>
-      <td className="text-slate-950 text-base p-3">{user.email}</td>
-      <td className="text-slate-950 text-base p-3">{user.password}</td>
-      <td className="text-slate-950 text-base p-3">{user.type}</td>
-      <td className="text-slate-950 text-base p-3">{user.city || 'N/A'}</td>
-      <td className="text-slate-950 text-base p-3">{user.subType || 'N/A'}</td>
-      <td className="text-slate-950 text-base p-3">{user.additionalField || 'N/A'}</td>
-      <td><button className="bg-green-900 p-2 rounded text-white hover:bg-green-500 m-1">Update</button>
-          <button className="bg-red-900 p-2 rounded text-white hover:bg-red-500 m-1">Delete</button>
-      </td>
-    </tr>
-  );
-})}
-
-    </tbody>
-  </table>
-</div>
-
+        <h1 className="text-center bg-slate-600 text-cyan-200 w-full mt-10 text-4xl">User Data Displayed</h1>
+        <table className="w-full text-sm overflow-scroll text-left rtl:text-right text-gray-500 dark:text-gray-400">
+          <thead className="text-xs text-gray-700 uppercase bg-gray-50 pt-2 dark:bg-gray-700 dark:text-gray-400">
+            <tr>
+              <td scope="col" className="px-6 py-3">Name</td>
+              <td scope="col" className="px-6 py-3">Surname</td>
+              <td scope="col" className="px-6 py-3">E-Mail</td>
+              <td scope="col" className="px-6 py-3">Password</td>
+              <td scope="col" className="px-6 py-3">Type</td>
+              <td scope="col" className="px-6 py-3">City</td>
+              <td scope="col" className="px-6 py-3">Sub-Type</td>
+              <td scope="col" className="px-6 py-3">State</td>
+              <td scope="col" className="px-6 py-3">Action</td>
+            </tr>
+          </thead>
+          <tbody className="w-full">
+            {users.map((user) => (
+              <tr key={user.email} className="border w-full">
+                <td className="text-slate-950 text-base p-3">{user.name}</td>
+                <td className="text-slate-950 text-base p-3">{user.surname}</td>
+                <td className="text-slate-950 text-base p-3">{user.email}</td>
+                <td className="text-slate-950 text-base p-3">{user.password}</td>
+                <td className="text-slate-950 text-base p-3">{user.type}</td>
+                <td className="text-slate-950 text-base p-3">{user.city || 'N/A'}</td>
+                <td className="text-slate-950 text-base p-3">{user.subType || 'N/A'}</td>
+                <td className="text-slate-950 text-base p-3">{user.state || 'N/A'}</td>
+                <td>
+                  <button className="bg-green-900 p-2 rounded text-white hover:bg-green-500 m-1">Update</button>
+                  <button className="bg-red-900 p-2 rounded text-white hover:bg-red-500 m-1">Delete</button>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
     </>
   );
 };

@@ -1,0 +1,16 @@
+react hook optimization -> use defalutvalue, react.memo, usecallback,shouldunregister
+setup mock server
+react query
+
+
+
+name
+surname
+email
+password
+types -> 1234 , 
+
+1 -
+2 - city
+3 -city[text], subtype - 1234, 1-> state[text], 234 -
+4 - city

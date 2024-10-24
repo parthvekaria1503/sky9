@@ -1,0 +1,40 @@
+04-10 cd							time table
+11-18 ml						19/11 - ml	
+19-ml							22/11 - cd
+20-21 cd						30/11 - cc
+22-cd							07/12 - ai
+23-29 cc						11/12 - mad
+30 cc							16/12 - is
+01 mcad
+02-06 ai
+07 - ai
+08-10 mad
+11-mcad
+12/15 is
+16-is
+
+
+
+15 fri
+16 sat
+17 sun
+18 mon
+
+19/11 ml  tue 
+22/11 cd  fri
+
+28
+29
+30/11 cc  sat
+
+05
+06
+07/12 ai  sat
+11/12 mad wed
+16/12 is  mon
+
+
+Leaves:
+15-22
+28-30
+5-16

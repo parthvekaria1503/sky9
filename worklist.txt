@@ -1,14 +1,32 @@
-.Here I'm notifying with an update on my current task.
+.By October 21th, i will likely have accomplished the objectives.
 
-.By October 17th, i will likely have accomplished our objectives.
-
-.I've accomplished the following goals:
+.I've accomplished the following things:
+	.Learning: React Query.
+		Functionalties:
+			Compeltion of CRUD
+			learn about: reValidateMode.
+			
+		
+		.Learn how to implement  tansack react query 
 	
-	.Make a form using React-Hook-Form for performing operations and checked for its optimization such like: usedefalutvalue, react.memo, usecallback, shouldunregister
-	
-	.Created mock server which manages the data for data operation and it works on JSON schema.
+	.Work: In Task, show working of above functionalties
+	.Further: To implement react query in form(CRUD) and 		  completion of it.
 
-.what i am currently working on this project phase is listed below:
-	. Going for tansack react query to implement in given above task. By which it helps to easy to fetch data.
 
-.This task is on schedule, and I think i am making the required progress towards our objectives.
+reValidateMode:
+
+onBlur: when user loses focus
+onChange :when user type one by one text, by default
+onSubmit : when user submit
+
+most prefrable: 
+simple form - onchange and onblur
+complex form - onsubmit and most prefrable
+
+onTouched: triger on every change
+all : blur and change
+
+
+
+
+
