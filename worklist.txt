@@ -1,14 +1,22 @@
-.Here I'm notifying with an update on my current task.
 
-.By October 17th, i will likely have accomplished our objectives.
+Date: 25/10/2024							      Role: Jr. React Developer
 
-.I've accomplished the following goals:
+I've accomplished the following Task:
+Completed Tasks:
+	Learn - Atomic Design Pattern
+	Updated - Layout of CRUD Task
+	Implement File structure factoring in Task
+
+Ongoing Tasks:
+	React Query
+	Github Branches
+
+Further Tasks:
+•	Implement Atomic Structure in Project
+•	Execute git extra commands
+
+Approve by;
+	Abhishek sir
+	Suchit bhai
+
 	
-	.Make a form using React-Hook-Form for performing operations and checked for its optimization such like: usedefalutvalue, react.memo, usecallback, shouldunregister
-	
-	.Created mock server which manages the data for data operation and it works on JSON schema.
-
-.what i am currently working on this project phase is listed below:
-	. Going for tansack react query to implement in given above task. By which it helps to easy to fetch data.
-
-.This task is on schedule, and I think i am making the required progress towards our objectives.

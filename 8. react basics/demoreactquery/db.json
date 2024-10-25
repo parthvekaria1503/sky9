@@ -1,0 +1,24 @@
+{
+  "users": [
+    {
+      "name": "John",
+      "surname": "Doe",
+      "email": "john.doe@example.com",
+      "password": "password123",
+      "city": "New York",
+      "type": "type1",
+      "subType": "subtype1",
+      "additionalField": "NY"
+    },
+    {
+      "name": "Jane",
+      "surname": "Smith",
+      "email": "jane.smith@example.com",
+      "password": "password456",
+      "city": "Los Angeles",
+      "type": "type2",
+      "subType": null,
+      "additionalField": null
+    }
+  ]
+}
