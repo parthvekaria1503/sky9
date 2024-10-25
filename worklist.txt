@@ -1,32 +1,18 @@
-.By October 21th, i will likely have accomplished the objectives.
+Date: 25/10/2024 						Position: Jr. React Developer
 
-.I've accomplished the following things:
-	.Learning: React Query.
-		Functionalties:
-			Compeltion of CRUD
-			learn about: reValidateMode.
-			
-		
-		.Learn how to implement  tansack react query 
-	
-	.Work: In Task, show working of above functionalties
-	.Further: To implement react query in form(CRUD) and 		  completion of it.
+	Share a quick update on today’s progress:
 
-
-reValidateMode:
-
-onBlur: when user loses focus
-onChange :when user type one by one text, by default
-onSubmit : when user submit
-
-most prefrable: 
-simple form - onchange and onblur
-complex form - onsubmit and most prefrable
-
-onTouched: triger on every change
-all : blur and change
-
-
-
-
-
+Completed Tasks:
+	Abc
+	Abc
+	Abc
+Ongoing Tasks:
+•	Abc
+•	Abc
+•	Abc
+Further Tasks:
+	Abc
+	Abc
+	Abc
+Approved by :
+	Abhishek sir , suchit bhai

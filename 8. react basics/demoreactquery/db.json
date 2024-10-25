@@ -1,19 +1,24 @@
 {
-    "employees": [
-      {
-        "id": "1",
-        "name": "John Doe",
-        "email": "john@example.com",
-        "phone": "123-456-7890",
-        "active": true
-      },
-      {
-        "id": "2",
-        "name": "Jane Smith",
-        "email": "jane@example.com",
-        "phone": "987-654-3210",
-        "active": false
-      }
-    ]
-  }
-  
+  "users": [
+    {
+      "name": "John",
+      "surname": "Doe",
+      "email": "john.doe@example.com",
+      "password": "password123",
+      "city": "New York",
+      "type": "type1",
+      "subType": "subtype1",
+      "additionalField": "NY"
+    },
+    {
+      "name": "Jane",
+      "surname": "Smith",
+      "email": "jane.smith@example.com",
+      "password": "password456",
+      "city": "Los Angeles",
+      "type": "type2",
+      "subType": null,
+      "additionalField": null
+    }
+  ]
+}

@@ -3,7 +3,7 @@ const bodyParser = require('body-parser');
 const cors = require('cors');
 
 const app = express();
-const PORT = 3001; // Different port to avoid conflicts
+const PORT = 3002; // Different port to avoid conflicts
 
 app.use(cors());
 app.use(bodyParser.json());
@@ -36,5 +36,5 @@ app.get('/users/:email', (req, res) => {
 
 
 app.listen(PORT, () => {
-    console.log(`Mock server is running on http://localhost:${PORT}`);
+    console.log(`Mock server is running on http://localhost:${PORT}/users`);
 });

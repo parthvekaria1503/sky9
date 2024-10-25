@@ -1,7 +1,7 @@
 // src/App.tsx
 import React from "react";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import UserForm from "./components/userform";
+import UserForm from "./components/Userform/Userform";
 
 const queryClient = new QueryClient();
 
