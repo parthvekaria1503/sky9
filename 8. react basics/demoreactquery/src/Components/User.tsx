@@ -63,12 +63,16 @@ const UserForm = () => {
 
   const selectedType = watch("type");
 
-  const { data: users, isLoading } = useQuery(['users'], fetchUsers);
+  const { data: users, isLoading } = useQuery({
+    queryKey: ["users"],
+    queryFn: fetchUsers
+  });
 
-  const mutation = useMutation(createUser, {
+  const mutation = useMutation({
+    mutationFn: createUser,
     onSuccess: () => {
-      queryClient.invalidateQueries(['users']); // Refetch users after creation
-      reset(); // Clear the form after submission
+      queryClient.invalidateQueries({ queryKey: ['users']}); 
+      reset();
     },
     onError: (error) => {
       console.error(error);

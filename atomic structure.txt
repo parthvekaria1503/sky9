@@ -1,0 +1,12 @@
+Atomic Design Pattern:
+
+Atoms: The smallest building blocks of design, such as buttons, input fields, and labels. These are the fundamental elements that can't be broken down further without losing their meaning.
+
+Molecules: Groups of atoms that work together as a functional unit. For example, a search form might consist of a text input atom and a button atom combined to create a search molecule.
+
+Organisms: More complex components made up of groups of molecules and/or atoms. An example would be a navigation bar that combines multiple links (molecules) and a logo (atom).
+
+Templates: Layouts that arrange organisms into a structure, defining the overall layout of the page. Templates are more concerned with the layout and placement of content rather than the specific content itself.
+
+Pages: Specific instances of templates that contain real content. Pages are where the design is brought to life, showcasing how the design elements function together with actual data.
+
