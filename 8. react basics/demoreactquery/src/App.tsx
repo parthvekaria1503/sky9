@@ -1,13 +1,14 @@
-import './App.css'
-import User from './Components/User'
+import UserForm from "./Components/Organisms/UserForm";
+// import UserTable from "./Components/Organisms/UserTable";
 
-function App() {
-
+const App = () => {
+  
   return (
-    <>
-    <User />      
-    </>
-  )
-}
+    <div>
+      <UserForm />
+      {/* <UserTable  users={[]} /> */}
+    </div>
+  );
+};
 
-export default App
+export default App;
