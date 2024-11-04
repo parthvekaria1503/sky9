@@ -98,40 +98,12 @@
       "type": "type1"
     },
     {
-      "id": "6e30",
-      "name": "Tester",
-      "surname": "Monday",
-      "email": "parthveka@gmail.com",
-      "password": "1asasassaasa",
-      "city": "R",
-      "type": "type3"
-    },
-    {
-      "id": "1344",
-      "name": "Parth",
-      "surname": "Vekariyaaaa",
-      "email": "part@gmail.com",
+      "id": "a5a6",
+      "name": "parth",
+      "surname": "aa",
+      "email": "parthvekaria9099@gmail.com",
       "password": "aaaaaaaaaaaaaaaaaaaaaa",
       "type": "type1"
-    },
-    {
-      "id": "88f8",
-      "name": "Parth",
-      "surname": "talsania",
-      "email": "kan1q123@gmail.com",
-      "password": "ffffffffffffffffffffffffffff",
-      "city": "Rajkot",
-      "type": "type3",
-      "subType": "subtype1",
-      "additionalField": "Gujarat"
-    },
-    {
-      "id": "6f9a",
-      "name": "Parth",
-      "surname": "s,la,",
-      "email": "parthvekaria9091119@gmail.com",
-      "password": "aaaaaaaaaazzzzzzzzzzzzzzzzzz",
-      "type": "type3"
     }
   ]
 }

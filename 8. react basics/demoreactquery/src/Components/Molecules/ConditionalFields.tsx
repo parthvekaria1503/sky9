@@ -1,11 +1,18 @@
 import React from 'react';
-import { Controller, Control } from 'react-hook-form';
+import { Controller, Control, FieldValues } from 'react-hook-form';
 import Input from '../Atoms/Input';
 import Select from '../Atoms/Select';
 
+interface FormValues extends FieldValues {
+    type?: string;
+    city?: string;
+    subType?: string;
+    additionalField?: string;
+}
+
 interface ConditionalFieldsProps {
-    control: Control<any>; // Specify type for control
-    watch: (field: string) => any; // Specify type for watch function
+    control: Control<FormValues>; // Specify type for control
+    watch: (field: keyof FormValues) => FormValues[keyof FormValues]; // Specify type for watch function
 }
 
 const ConditionalFields: React.FC<ConditionalFieldsProps> = ({ control, watch }) => {

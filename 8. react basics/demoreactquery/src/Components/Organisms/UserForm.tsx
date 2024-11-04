@@ -1,23 +1,24 @@
 import { useCallback } from 'react';
-import { useForm} from "react-hook-form";
+import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query';
+import { useMutation, useQueryClient } from '@tanstack/react-query';
 import UserFields from '../Molecules/UserField';
 import ConditionalFields from '../Molecules/ConditionalFields';
 
-interface FormData {
-    name: string;
-    surname: string;
-    email: string;
-    password: string;
-    city?: string;
-    type: string;
-    subType?: string;
-    additionalField?: string;
-}
+// interface FormData {
+//     name: string;
+//     surname: string;
+//     email: string;
+//     password: string;
+//     city?: string;
+//     type: string;
+//     subType?: string;
+//     additionalField?: string;
+// }
 
 const schema = z.object({
+
     name: z.string().min(1, "Name is required"),
     surname: z.string().min(1, "Surname is required"),
     email: z.string().email("Invalid email address"),
@@ -26,14 +27,11 @@ const schema = z.object({
     type: z.string().min(1, "Type is required"),
     subType: z.string().optional(),
     additionalField: z.string().optional(),
+
 });
 
-// Fetch users function
-const fetchUsers = async () => {
-    const response = await fetch("http://localhost:3001/users");
-    if (!response.ok) throw new Error("Network response was not ok");
-    return response.json();
-};
+export type FormData = z.infer<typeof schema>
+
 
 // Create user function
 const createUser = async (data: FormData) => {
@@ -63,11 +61,6 @@ const UserForm = () => {
         shouldUnregister: false,
     });
 
-    const { data: users, isLoading } = useQuery({
-        queryKey: ["users"],
-        queryFn: fetchUsers
-    });
-
     const mutation = useMutation({
         mutationFn: createUser,
         onSuccess: () => {
@@ -80,10 +73,8 @@ const UserForm = () => {
     });
 
     const onSubmit = useCallback((data: FormData) => {
-        mutation.mutate(data); // Trigger the mutation
+        mutation.mutate(data);
     }, [mutation]);
-
-    if (isLoading) return <div>Loading...</div>;
 
     return (
         <form onSubmit={handleSubmit(onSubmit)}>

@@ -1,11 +1,19 @@
 import React from 'react';
-import { Controller, Control } from 'react-hook-form';
+import { Controller, Control, FieldErrors, FieldValues } from 'react-hook-form';
 import Input from '../Atoms/Input';
 import Select from '../Atoms/Select';
 
+// interface UserFormValues extends FieldValues {
+//     name?: string;
+//     surname?: string;
+//     email?: string;
+//     password?: string;
+//     type?: string;
+// }
+
 interface UserFieldsProps {
-    control: Control<any>; // Specify type for control
-    errors: Record<string, any>; // Or a more specific error type if you have one
+    control: Control<FormData>;
+    errors: FieldErrors<FormData>;
 }
 
 const UserFields: React.FC<UserFieldsProps> = ({ control, errors }) => (
