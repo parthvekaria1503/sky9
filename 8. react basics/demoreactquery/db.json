@@ -132,6 +132,60 @@
       "email": "parthvekaria9091119@gmail.com",
       "password": "aaaaaaaaaazzzzzzzzzzzzzzzzzz",
       "type": "type3"
+    },
+    {
+      "id": "07f5",
+      "name": "Parth",
+      "surname": "talsania",
+      "email": "parthveka@gmail.com",
+      "password": "121123121",
+      "type": "type3"
+    },
+    {
+      "id": "d4ad",
+      "name": "Parth",
+      "surname": "s,la,",
+      "email": "part@gmail.com",
+      "password": "qq1q1q1q1q1q",
+      "city": "Rajkot",
+      "type": "type3",
+      "subType": "subtype1",
+      "additionalField": "Gujarat"
+    },
+    {
+      "id": "e3f4",
+      "name": "Parth",
+      "surname": "talsania",
+      "email": "parthvekaria9099@gmail.com",
+      "password": "aaaaaaaaaaaaaaaaaaaaaa",
+      "type": "type3"
+    },
+    {
+      "id": "4d78",
+      "name": "parth",
+      "surname": "aaaa",
+      "email": "parthvekaria9099@gmail.com",
+      "password": "aaaaaaaaaaaa",
+      "type": "type1"
+    },
+    {
+      "id": "5d47",
+      "name": "Parth",
+      "surname": "talsania",
+      "email": "parthvekaria9099@gmail.com",
+      "password": "asasasasasas",
+      "type": "type1"
+    },
+    {
+      "id": "659f",
+      "name": "Parth",
+      "surname": "Vekariyaaaaaaaa",
+      "email": "designacthub@gmail.com",
+      "password": "vfvfvfvfv",
+      "city": "Rajkot",
+      "type": "type3",
+      "subType": "subtype1",
+      "additionalField": "Gujarat"
     }
   ]
 }

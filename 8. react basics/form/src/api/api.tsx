@@ -1,7 +1,7 @@
 // api.ts
 import { User } from './types'; // Adjust the path as necessary
 
-const API_URL = 'http://localhost:3001/users';
+const API_URL = 'http://localhost:3002/users';
 
 export const fetchUsers = async (): Promise<User[]> => {
   const response = await fetch(API_URL);

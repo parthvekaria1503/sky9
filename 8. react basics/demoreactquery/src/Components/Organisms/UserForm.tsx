@@ -18,7 +18,6 @@ import ConditionalFields from '../Molecules/ConditionalFields';
 // }
 
 const schema = z.object({
-
     name: z.string().min(1, "Name is required"),
     surname: z.string().min(1, "Surname is required"),
     email: z.string().email("Invalid email address"),
@@ -27,8 +26,23 @@ const schema = z.object({
     type: z.string().min(1, "Type is required"),
     subType: z.string().optional(),
     additionalField: z.string().optional(),
-
+}).refine((data) => {
+    return !((data.type === "type2" || data.type === "type3" || data.type === "type4") && !data.city);
+}, {
+    message: "City is required when Type is type2, type3, or type4",
+    path: ["city"],
+}).refine((data) => {
+    return !(data.type === "type3" && !data.subType);
+}, {
+    message: "SubType is required when Type is type3",
+    path: ["subType"],
+}).refine((data) => {
+    return !(data.subType === "subtype1" && !data.additionalField);
+}, {
+    message: "State is required when SubType is subtype1",
+    path: ["additionalField"],
 });
+
 
 export type FormData = z.infer<typeof schema>
 
@@ -81,7 +95,9 @@ const UserForm = () => {
             <h1 className="w-full bg-slate-700 text-white text-center text-5xl">User Form</h1>
             <UserFields control={control} errors={errors} />
             <ConditionalFields control={control} watch={watch} />
-            <button type="submit" className="m-3 p-2 bg-blue-500 text-white">Submit</button>
+            <div className="flex justify-center">
+        <button type="submit" className="m-3 p-2 bg-blue-500 text-white">Submit</button>
+    </div>
         </form>
     );
 };

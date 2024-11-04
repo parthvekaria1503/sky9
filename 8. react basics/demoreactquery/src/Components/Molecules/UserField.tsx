@@ -1,22 +1,22 @@
 import React from 'react';
-import { Controller, Control, FieldErrors, FieldValues } from 'react-hook-form';
+import { Controller, FieldValues,  } from 'react-hook-form';
 import Input from '../Atoms/Input';
 import Select from '../Atoms/Select';
 
-// interface UserFormValues extends FieldValues {
-//     name?: string;
-//     surname?: string;
-//     email?: string;
-//     password?: string;
-//     type?: string;
-// }
-
-interface UserFieldsProps {
-    control: Control<FormData>;
-    errors: FieldErrors<FormData>;
+interface UserFormValues extends FieldValues {
+    name?: string;
+    surname?: string;
+    email?: string;
+    password?: string;
+    type?: string;
 }
 
-const UserFields: React.FC<UserFieldsProps> = ({ control, errors }) => (
+// interface UserFieldsProps extends FieldValues{
+//     control: Control<FormData>;
+//     errors: FieldErrors<FormData>;
+// }
+
+const UserFields: React.FC<UserFormValues> = ({ control, errors }) => (
     <>
         <div className="flex flex-row w-full justify-center">
             <div className="m-3 p-3 w-1/3">

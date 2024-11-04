@@ -1,8 +1,25 @@
 import React from 'react';
 
-const UserTable = ({users}) => (
-  <table className="w-full text-sm overflow-scroll text-left rtl:text-right text-gray-500 dark:text-gray-400">
-    <thead className="text-xs text-gray-700 uppercase bg-gray-50 pt-2 dark:bg-gray-700 dark:text-gray-400">
+// Define a type for user
+interface User {
+  name: string;
+  surname: string;
+  email: string;
+  password: string;
+  type: string;
+  city?: string; // Optional
+  subType?: string; // Optional
+  additionalField?: string; // Optional
+}
+
+// Define props type for UserTable
+interface UserTableProps {
+  users: User[];
+}
+
+const UserTable: React.FC<UserTableProps> = ({ users }) => (
+  <table className="w-full text-sm overflow-scroll  text-left rtl:text-right text-gray-500 dark:text-gray-400">
+    <thead className="text-xs text-gray-700 uppercase border-gray-950 bg-gray-50 pt-2 dark:bg-gray-700 dark:text-gray-400">
       <tr>
         <th>Name</th>
         <th>Surname</th>
@@ -12,26 +29,32 @@ const UserTable = ({users}) => (
         <th>City</th>
         <th>Sub-Type</th>
         <th>Additional Field</th>
-        <th>Actions</th>
+        {/* <th>Actions</th> */}
       </tr>
     </thead>
     <tbody>
-      {users.map((user) => (
-        <tr key={user.email}>
-          <td>{user.name}</td>
-          <td>{user.surname}</td>
-          <td>{user.email}</td>
-          <td>{user.password}</td>
-          <td>{user.type}</td>
-          <td>{user.city || 'N/A'}</td>
-          <td>{user.subType || 'N/A'}</td>
-          <td>{user.additionalField || 'N/A'}</td>
-          <td>
-            <button className="bg-green-900 p-2 rounded text-white hover:bg-green-500 m-1">Update</button>
-            <button className="bg-red-900 p-2 rounded text-white hover:bg-red-500 m-1">Delete</button>
-          </td>
+      {users.length === 0 ? (
+        <tr>
+          <td className="text-center">No users available</td>
         </tr>
-      ))}
+      ) : (
+        users.map((user) => (
+          <tr key={user.email}>
+            <td>{user.name}</td>
+            <td>{user.surname}</td>
+            <td>{user.email}</td>
+            <td>{user.password}</td>
+            <td>{user.type}</td>
+            <td>{user.city || 'N/A'}</td>
+            <td>{user.subType || 'N/A'}</td>
+            <td>{user.additionalField || 'N/A'}</td>
+            {/* <td>
+              <button className="bg-green-900 p-2 rounded text-white hover:bg-green-500 m-1">Update</button>
+              <button className="bg-red-900 p-2 rounded text-white hover:bg-red-500 m-1">Delete</button>
+            </td> */}
+          </tr>
+        ))
+      )}
     </tbody>
   </table>
 );
