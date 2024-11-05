@@ -47,91 +47,15 @@
       "type": "type1"
     },
     {
-      "id": "3844",
-      "name": "parth",
-      "surname": "aa",
-      "email": "part@gmail.com",
-      "password": "qqqqqqqqqqqqqqqqqqq",
-      "type": "type1"
-    },
-    {
-      "id": "a2e5",
-      "name": "aa",
-      "surname": "aaaa",
-      "email": "parthvekaria9091119@gmail.com",
-      "password": "aaaaaaaaaaaaaaaaaaaaaaa",
-      "type": "type1"
-    },
-    {
-      "id": "1fc6",
-      "name": "Partha",
-      "surname": "talsaniaa",
-      "email": "kan1q123@gmail.com",
-      "password": "aqqqqqqqqqqqqqqqqqqqqq",
-      "city": "q",
-      "type": "type3",
-      "subType": "subtype1",
-      "additionalField": "aaa"
-    },
-    {
-      "id": "de29",
-      "name": "Parth",
-      "surname": "talsania",
+      "id": "f0e5",
+      "name": "Final Data",
+      "surname": "Data Final",
       "email": "parthveka@gmail.com",
-      "password": "zzzzzzzzzzzzzzzzzzzzzzzzzzzz",
-      "type": "type1"
-    },
-    {
-      "id": "7543",
-      "name": "abbcb",
-      "surname": "acb",
-      "email": "kan1q123@gmail.com",
-      "password": "asdfghjkl",
-      "type": "type1"
-    },
-    {
-      "id": "581b",
-      "name": "test1",
-      "surname": "test2",
-      "email": "designacthub@gmail.com",
-      "password": "qwertytuii",
-      "type": "type1"
-    },
-    {
-      "id": "6e30",
-      "name": "Tester",
-      "surname": "Monday",
-      "email": "parthveka@gmail.com",
-      "password": "1asasassaasa",
-      "city": "R",
-      "type": "type3"
-    },
-    {
-      "id": "1344",
-      "name": "Parth",
-      "surname": "Vekariyaaaa",
-      "email": "part@gmail.com",
-      "password": "aaaaaaaaaaaaaaaaaaaaaa",
-      "type": "type1"
-    },
-    {
-      "id": "88f8",
-      "name": "Parth",
-      "surname": "talsania",
-      "email": "kan1q123@gmail.com",
-      "password": "ffffffffffffffffffffffffffff",
+      "password": "123456789",
       "city": "Rajkot",
       "type": "type3",
       "subType": "subtype1",
       "additionalField": "Gujarat"
-    },
-    {
-      "id": "6f9a",
-      "name": "Parth",
-      "surname": "s,la,",
-      "email": "parthvekaria9091119@gmail.com",
-      "password": "aaaaaaaaaazzzzzzzzzzzzzzzzzz",
-      "type": "type3"
     }
   ]
 }

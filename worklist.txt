@@ -1,13 +1,13 @@
-Date: 04/11/2024
+Date: 05/11/2024
 I've accomplished the following Task:
-Completed Tasks:
-	
-    Solved Errors in task.
-    Overall Complete the operation.
-    Arrange the file structure with Suchit Bhai.
-    Changes made in code convention as concern of security.
 
 Best Practices for React js.
 	topics:
-		types of errors
-		Components Structuring
+		1: types of errors : Runtime and compile time
+		2: Components Structuring from one file to 			many other files(nesting)
+		3: how to pass props when we refactor the 			code
+		4: design pattern eg: components->label-> 			label related files..
+		5: code review neat vs dirty code, make code 			effective rather than long code
+
+Understanding the Project(abogaphone) Tech memory Guide
+and take overview of project code.
