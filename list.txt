@@ -1,0 +1,6 @@
+data fetch = react query
+validation = zod
+server = json server
+
+for image = tinypng
+	  = lazy loading.

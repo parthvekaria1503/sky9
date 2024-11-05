@@ -1,22 +1,13 @@
-
-Date: 25/10/2024							      Role: Jr. React Developer
-
+Date: 04/11/2024
 I've accomplished the following Task:
 Completed Tasks:
-	Learn - Atomic Design Pattern
-	Updated - Layout of CRUD Task
-	Implement File structure factoring in Task
-
-Ongoing Tasks:
-	React Query
-	Github Branches
-
-Further Tasks:
-•	Implement Atomic Structure in Project
-•	Execute git extra commands
-
-Approve by;
-	Abhishek sir
-	Suchit bhai
-
 	
+    Solved Errors in task.
+    Overall Complete the operation.
+    Arrange the file structure with Suchit Bhai.
+    Changes made in code convention as concern of security.
+
+Best Practices for React js.
+	topics:
+		types of errors
+		Components Structuring
